@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Заголовок страницы</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body>
+<header></header>
+<div id="content">
+    <div id="amount_due">
+        <div class="logo"></div>
+        <div class="header_text">Amount due</div>
+        <p class="amount_info">
+            Billing period <span>01/02/2018 - 01/31/2018</span>
+        </p>
+        <p class="price">
+            &#36;<span>50</span>
+        </p>
+        <p class="amount_info">
+            Due date <span>02/28/2018</span>
+        </p>
+        <a href="#" class="link">view my bill ❯</a>  <!--не нашел подходящую стрелочку в юникоде-->
+        <button type="button" class="btn btn-outline-info">pay</button>
+    </div>
+    <div id="auto_pay">
+        <div class="logo"></div>
+        <div class="header_text">Auto-pay</div>
+        <p>You already have auto payment
+            via Stripe/PayPal on sum <span>&#36;57</span> and is paid automatically on 17-th day of month. Next payment
+            will
+            be done on
+            <span>12/17/2017</span></p>
+        <button type="button" class="btn btn-outline-info">manage</button>
+    </div>
+    <div id="acc_activ">
+        <div class="container">
+            <h2 class="header_text">last account activities</h2>
+            <table class="table">
+                <thead class="thead-light">
+                <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">Activity</th>
+                    <th scope="col">Sum</th>
+                    <th scope="col">Balance</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">
+                        <div class="date">12/11/17</div>
+                        <div class="time">05:34 pm</div>
+                    </th>
+                    <td>Internet fee</td>
+                    <td>
+                        <span class="loss"> -&#36;1.00</span>
+                    </td>
+                    <td>
+                        <span class="income">
+                        &#36;19.00
+                         </span>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <div class="date">12/11/17</div>
+                        <div class="time">05:27 pm</div>
+                    </th>
+                    <td>Payment via PayPal</td>
+                    <td><span class="income">&#36;10.00</span></td>
+                    <td><span class="income">&#36;18.00</span></td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <div class="date">12/11/17</div>
+                        <div class="time">12:52 pm</div>
+                    </th>
+                    <td>Internet fee</td>
+                    <td><span class="loss">-&#36;50.00</span></td>
+                    <td><span class="loss">-&#36;8.00</span></td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <div class="date">12/11/17</div>
+                        <div class="time">12:52 pm</div>
+                    </th>
+                    <td>Payment via PayPal</td>
+                    <td><span class="income">&#36;10.00</span></td>
+                    <td><span class="income">&#36;18.00</span></td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <div class="date">12/11/17</div>
+                        <div class="time">12:52 pm</div>
+                    </th>
+                    <td>Payment via PayPal</td>
+                    <td><span class="income">&#36;1.00</span></td>
+                    <td><span class="income">&#36;8.00</span></td>
+                </tr>
+                </tbody>
+            </table>
+            <a href="#" class="link">all transactions ❯</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

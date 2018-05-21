@@ -1,0 +1,241 @@
+@import 'reset.css';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  background: #ffffff;
+  height: 32px;
+}
+
+#content {
+  align-items: center;
+  background-color: rgb(247, 248, 249);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 100px;
+  padding-top: 120px;
+  width: 100%;
+  #amount_due, #auto_pay {
+    align-items: center;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 5px 37.2px 2.8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 30px;
+    padding-top: 40px;
+    padding-bottom: 45px;
+    position: relative;
+    height: 455px;
+    width: 460px;
+    &:before {
+      content: '';
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+      position: absolute;
+      top: -9px;
+      height: 9px;
+      width: 100%;
+    }
+    .logo {
+      height: 60px;
+      width: 60px;
+    }
+    button {
+      border-radius: 20px;
+      text-transform: uppercase;
+      height: 45px;
+      width: 205px;
+    }
+  }
+  #amount_due {
+    margin-right: 30px;
+    &:before {
+      background: linear-gradient(to right, #007429, #86d073);
+    }
+    .logo {
+      background: url(../image/icon_amount_green.svg) no-repeat;
+    }
+    .amount_info {
+      color: rgb(117, 115, 125);
+      font-size: 14px;
+      span {
+        font-weight: 600;
+      }
+    }
+    .price {
+      font-size: 35px;
+      color: rgb(62, 61, 66);
+      font-weight: 600;
+      span {
+        font-size: 50px;
+        font-weight: 700;
+      }
+    }
+  }
+  #auto_pay {
+    &:before {
+      background: linear-gradient(to right, #0067c6, #35c4ee);
+    }
+    .logo {
+      background: url(../image/icon_auto_pay.svg) no-repeat;
+    }
+    p {
+      font-size: 16px;
+      color: rgb(62, 61, 66);
+      padding: 0 5%;
+      line-height: 1.875;
+      text-align: center;
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+  #acc_activ {
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 5px 37.2px 2.8px rgba(0, 0, 0, 0.05);
+    padding: 40px 0 45px 0;
+    width: 1140px;
+    .container {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      .header_text {
+        margin-bottom: 40px;
+      }
+      .table {
+        margin-bottom: 40px;
+        thead {
+          tr {
+            th {
+              font-size: 14px;
+              color: rgb(117, 115, 125);
+            }
+          }
+        }
+        tbody {
+          tr {
+            td {
+              font-size: 16px;
+              line-height: 2.5;
+            }
+            &:first-child {
+              border-top: none;
+            }
+            &:last-child {
+              border-bottom: 1px solid #dee2e6;
+            }
+          }
+        }
+      }
+    }
+  }
+  .header_text {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .link {
+    color: rgb(95, 197, 190);
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+  .date, .time {
+    font-size: 15px;
+    line-height: 1.467;
+  }
+  .date {
+    font-weight: bold;
+  }
+  .loss {
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(245, 0, 0);
+  }
+  .income {
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(0, 135, 54);
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 567px) {
+  #content {
+    #amount_due, #auto_pay, #acc_activ {
+      width: 290px;
+    }
+    #amount_due {
+      margin: 0 0 30px 0;
+    }
+    #acc_activ {
+      height: auto;
+      padding: 40px 0;
+      font-size: 12px;
+      .time, .date {
+        font-size: 12px;
+      }
+      .loss {
+        font-size: 14px;
+      }
+      .income {
+        font-size: 14px;
+      }
+    }
+
+  }
+  #content #acc_activ .container .table tbody tr td {
+    font-size: 12px;
+  }
+  .table td, .table th {
+    padding: 0 7.5px 0 0;
+  }
+}
+
+@media screen and (min-width: 567px) and (max-width: 767px) {
+  #content {
+    #amount_due {
+      margin: 0 0 30px 0;
+    }
+    #acc_activ {
+      width: 460px;
+      height: auto;
+      padding: 40px 0;
+
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  #content {
+    #amount_due, #auto_pay {
+      width: 350px;
+    }
+    #acc_activ {
+      width: 760px;
+      height: auto;
+      padding: 40px 0;
+    }
+  }
+}
+

@@ -1,0 +1,174 @@
+@import url(reset.css);
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Open Sans', sans-serif; }
+
+p {
+  margin: 0; }
+
+header {
+  width: 100%;
+  background: #ffffff;
+  height: 32px; }
+
+#content {
+  align-items: center;
+  background-color: #f7f8f9;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 100px;
+  padding-top: 120px;
+  width: 100%; }
+  #content #amount_due, #content #auto_pay {
+    align-items: center;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 5px 37.2px 2.8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 30px;
+    padding-top: 40px;
+    padding-bottom: 45px;
+    position: relative;
+    height: 455px;
+    width: 460px; }
+    #content #amount_due:before, #content #auto_pay:before {
+      content: '';
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+      position: absolute;
+      top: -9px;
+      height: 9px;
+      width: 100%; }
+    #content #amount_due .logo, #content #auto_pay .logo {
+      height: 60px;
+      width: 60px; }
+    #content #amount_due button, #content #auto_pay button {
+      border-radius: 20px;
+      text-transform: uppercase;
+      height: 45px;
+      width: 205px; }
+  #content #amount_due {
+    margin-right: 30px; }
+    #content #amount_due:before {
+      background: linear-gradient(to right, #007429, #86d073); }
+    #content #amount_due .logo {
+      background: url(../image/icon_amount_green.svg) no-repeat; }
+    #content #amount_due .amount_info {
+      color: #75737d;
+      font-size: 14px; }
+      #content #amount_due .amount_info span {
+        font-weight: 600; }
+    #content #amount_due .price {
+      font-size: 35px;
+      color: #3e3d42;
+      font-weight: 600; }
+      #content #amount_due .price span {
+        font-size: 50px;
+        font-weight: 700; }
+  #content #auto_pay:before {
+    background: linear-gradient(to right, #0067c6, #35c4ee); }
+  #content #auto_pay .logo {
+    background: url(../image/icon_auto_pay.svg) no-repeat; }
+  #content #auto_pay p {
+    font-size: 16px;
+    color: #3e3d42;
+    padding: 0 5%;
+    line-height: 1.875;
+    text-align: center; }
+    #content #auto_pay p span {
+      font-weight: 600; }
+  #content #acc_activ {
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 5px 37.2px 2.8px rgba(0, 0, 0, 0.05);
+    padding: 40px 0 45px 0;
+    width: 1140px; }
+    #content #acc_activ .container {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%; }
+      #content #acc_activ .container .header_text {
+        margin-bottom: 40px; }
+      #content #acc_activ .container .table {
+        margin-bottom: 40px; }
+        #content #acc_activ .container .table thead tr th {
+          font-size: 14px;
+          color: #75737d; }
+        #content #acc_activ .container .table tbody tr td {
+          font-size: 16px;
+          line-height: 2.5; }
+        #content #acc_activ .container .table tbody tr:first-child {
+          border-top: none; }
+        #content #acc_activ .container .table tbody tr:last-child {
+          border-bottom: 1px solid #dee2e6; }
+  #content .header_text {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase; }
+  #content .link {
+    color: #5fc5be;
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-bottom: 30px; }
+  #content .date, #content .time {
+    font-size: 15px;
+    line-height: 1.467; }
+  #content .date {
+    font-weight: bold; }
+  #content .loss {
+    font-size: 18px;
+    font-weight: 600;
+    color: #f50000; }
+  #content .income {
+    font-size: 18px;
+    font-weight: 600;
+    color: #008736; }
+
+@media screen and (min-width: 320px) and (max-width: 567px) {
+  #content #amount_due, #content #auto_pay, #content #acc_activ {
+    width: 290px; }
+  #content #amount_due {
+    margin: 0 0 30px 0; }
+  #content #acc_activ {
+    height: auto;
+    padding: 40px 0;
+    font-size: 12px; }
+    #content #acc_activ .time, #content #acc_activ .date {
+      font-size: 12px; }
+    #content #acc_activ .loss {
+      font-size: 14px; }
+    #content #acc_activ .income {
+      font-size: 14px; }
+
+  #content #acc_activ .container .table tbody tr td {
+    font-size: 12px; }
+
+  .table td, .table th {
+    padding: 0 7.5px 0 0; } }
+@media screen and (min-width: 567px) and (max-width: 767px) {
+  #content #amount_due {
+    margin: 0 0 30px 0; }
+  #content #acc_activ {
+    width: 460px;
+    height: auto;
+    padding: 40px 0; } }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  #content #amount_due, #content #auto_pay {
+    width: 350px; }
+  #content #acc_activ {
+    width: 760px;
+    height: auto;
+    padding: 40px 0; } }
+
+/*# sourceMappingURL=style.css.map */
